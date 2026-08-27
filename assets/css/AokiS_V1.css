@@ -1,0 +1,589 @@
+*, html{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Noto Sans Condensed";
+    src: url(assets/fonts/NotoSans_Condensed-Regular.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Bold";
+    src: url(assets/fonts/NotoSans_Condensed-Bold.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Bold Italic";
+    src: url(assets/fonts/NotoSans_Condensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Italic";
+    src: url(assets/fonts/NotoSans_Condensed-Italic.ttf);
+}
+@font-face {
+  font-family: 'LT Comical Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('LT Comical Medium'), 
+       url('../fonts/LT-Comical.woff') format('woff');
+}
+body{
+    background-color: #007a80;
+    background-image: linear-gradient(to bottom, #000, #00494C, #007a80);
+    color: white;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body a:link{ /*color: yellow;*/
+    color:#fab433;
+}
+body a:visited{
+    color:#bbb;
+}
+
+body p, body span, body a, body h3, body li {
+  font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
+}
+body h1, body h2, body blockquote {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.noto-sans-<uniquifier> {
+  font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
+}
+.interface, .geral .interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==== Cabeçalho do site ==== */
+
+header {
+    max-width: 100%;
+    padding: 0;
+    padding-left: min(2rem, 6%);
+    padding-top:1.6rem;
+    /*padding-bottom: min(2rem, 6%);
+    /*border-style: outset;
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-color:aqua; */
+    background-color: #000;
+    position: fixed;
+}
+header .interface {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000;
+}
+header .logo img {
+    max-width: 80px;
+}
+
+header .btn-contato button{
+    width: 140px;
+    height: 50px;
+}
+/* ---- Para Tablets ---- */
+@media screen and (max-width: 1200px){
+    section#home {
+        background-position-x: 600px;
+    }
+    section#home .interface h1 {
+        line-height: 105%;
+    }
+    .interface {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+/* ---- Para celulares ---- */
+}@media screen and (max-width: 900px) {
+    header .menu-desktop, header .btn-menu-mob{
+        display:none;
+    }
+    header .btn-menu-mob{
+        display: block;
+    }
+    .interface {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+    section#home {
+        background-position-x: 300px;
+    }
+    section#home .interface h1 {
+        width: 60%;
+        line-height: 100%;
+    }
+}
+/* -- Menu de navegação -- */
+header .menu-desktop nav{
+    padding: 0 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo (esquerda) e hambúrguer (direita) */
+    flex-wrap: wrap;
+    position: relative;
+}
+
+header .menu-desktop nav ul {
+    list-style-type: none;
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+
+.menu-desktop nav ul li{
+    display: inline-block;
+    margin: 0 1rem;
+    font-size: 110%;
+}
+.menu-desktop nav ul li a:link {
+    color: #fff;
+    text-decoration: none;
+}
+.menu-desktop nav ul li a:visited {
+    color: rgb(183, 183, 183);
+}
+.menu-desktop nav ul li a:focus {
+    outline: 2px solid palegoldenrod;
+}
+.menu-desktop nav ul li a:hover {
+    color: aqua;
+    text-decoration:underline;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+.menu-desktop nav ul li:active {
+    color:aquamarine;
+}
+.menu-desktop nav ul li:target {
+    color:#fab433;
+    text-decoration: overline;
+}
+        /* --- ESTILO DO MENU (BASE) --- */
+        .menu-nav {
+            background-color: #2c3e50;
+            padding: 0 20px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Espaça logo (esquerda) e hambúrguer (direita) */
+            flex-wrap: wrap;
+            position: relative;
+            min-height: 60px;
+        }
+
+        /* Logo (opcional, só para demonstrar o alinhamento) */
+        /*.menu-logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+            text-decoration: none;
+            padding: 10px 0;
+            letter-spacing: 1px;
+        }*/
+
+        /* Esconde o checkbox (gatilho invisível) */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* --- BOTÃO HAMBÚRGUER (ALINHADO À DIREITA) --- */
+        .menu-hamburger {
+            display: none; /* Escondido no desktop */
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            width: 44px;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: auto; */ /* Não precisa com o space-between */
+            order: 2; /* Garante que fique depois do logo no flex */
+        }
+
+        /* Cada linha do hambúrguer */
+        .menu-hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.4s ease-in-out;
+            transform-origin: center;
+        }
+
+        /* --- LISTA DE NAVEGAÇÃO (horizontal no desktop) --- */
+        .menu-list {
+            list-style: none;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 5px;
+            order: 3; /* Vem depois do hambúrguer no flex, mas no desktop fica normal */
+        }
+
+        .menu-list li a {
+            display: block;
+            padding: 15px 20px;
+            color: white;
+            text-decoration: none;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+            white-space: nowrap;
+            font-weight: 500;
+        }
+
+        .menu-list li a:hover {
+            background-color: #34495e;
+        }
+
+        /* --- RESPONSIVIDADE (MOBILE) --- */
+        @media screen and (max-width: 768px) {
+            /* Mostra o hambúrguer */
+            .menu-hamburger {
+                display: flex;
+            }
+
+            /* A lista vira um menu vertical escondido */
+            .menu-list {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background-color: #fff;
+                padding: 10px 0;
+                order: 4; /* Fica depois de tudo no mobile */
+                border-top: 1px solid #ffff20;
+                margin-top: 10px;
+            }
+
+            .menu-list li {
+                width: 100%;
+                text-align: center;
+            }
+
+            .menu-list li a {
+                padding: 14px 20px;
+                border-bottom: 1px solid #3d566e;
+                white-space: normal;
+                border-radius: 0;
+            }
+
+            .menu-list li a:hover {
+                background-color: #34495e;
+            }
+
+            .menu-list li:last-child a {
+                border-bottom: none;
+            }
+
+            /* --- ABRIR O MENU (CHECKBOX HACK) --- */
+            .menu-toggle:checked ~ .menu-list {
+                display: flex;
+            }
+
+            /* --- ANIMAÇÃO HAMBÚRGUER → X (FORMA 2) --- */
+            /* Quando o checkbox está marcado, as linhas se transformam */
+            .menu-toggle:checked ~ .menu-hamburger span {
+                background-color: #e74c3c; /* Muda para vermelho (opcional) */
+            }
+
+            /* Linha 1 (superior) → gira 45° para baixo */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            /* Linha 2 (meio) → desaparece */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            /* Linha 3 (inferior) → gira -45° para cima */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        /* Ajuste para telas muito pequenas (ex: 320px) */
+        @media (max-width: 400px) {
+            .menu-list li a {
+                font-size: 14px;
+                padding: 12px 10px;
+            }
+
+            .menu-hamburger {
+                width: 38px;
+                height: 38px;
+            }
+
+            .menu-hamburger span {
+                width: 25px;
+                height: 2.5px;
+            }
+
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(1) {
+                transform: translateY(6.5px) rotate(45deg);
+            }
+
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(3) {
+                transform: translateY(-6.5px) rotate(-45deg);
+            }
+        }
+/*  @media screen and (max-width: 878px) {
+    /* Responsivo do hero */
+    /*.hero-site .txt-hero h1{
+        font-size: 2.6em;
+        line-height: 45px;
+    }
+    .hero-site .txt-hero p{
+        font-size: 14px;
+    }
+    .hero-site .txt-hero p span{
+        display: inline;
+    }
+    .hero-site button{
+        font-size: 18px;
+    }
+}*/
+
+/* -- Estilo do botão do menu mobile -- */
+
+/*header .btn-menu-mob {
+    display:none;
+}
+header .btn-menu-mob div{
+    background-color: #fff;
+    height: 3px;
+    margin: 10px 0;
+    transition: .2s;
+}
+header .btn-menu-mob .line-menumob-1{
+    width: 30px;
+}
+header .btn-menu-mob .line-menumob-2{
+    width: 20px;
+}
+header.rolar .btn-menu-mob div{
+    background-color:#000;
+}
+header .btn-menu-mob .line-menumob-1.ativo1 {
+    transform: rotate(45deg) translate(30%);
+}
+header .btn-menu-mob .line-menumob-2.ativo2 {
+    transform: rotate(-45deg) translate(30%);
+    width: 30px;
+}*/
+
+
+header .btn-contato button{
+    font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", sans-serif;
+    font-size: clamp(1rem, 1.1vw, 1.2rem);
+    line-height: 110%;
+    width: 8rem;
+    height: auto;
+    padding-top:5%;
+    padding-bottom: 5%;
+    background-color:transparent;
+    color: #fff;
+    border: 1px solid #fff;
+    cursor:pointer;
+}
+header .btn-contato button:hover {
+    color: #0869be;
+    background-color: #a1e9ee;
+}
+section.hero-site{
+    height: 100vh;
+    background-image: url(../img/arcoiris-dir-bkg.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y:top;
+    }
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero {
+    margin: min(2rem, 9%);
+    font-size: clamp(0.9rem,1.1vw,1.25rem);
+    letter-spacing: 0.03em;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: clamp(3.2em,4vw,4em);
+    line-height: 1.25rem;
+    margin-bottom: 1.8rem;
+}
+
+.hero-site .txt-hero h2 {
+    font-size: clamp(1.5rem,1.9vw, 2.1rem);
+    line-height: normal;
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-site .txt-hero p {
+    font-size: clamp(1rem,1.4vw,1.4rem);
+    letter-spacing: 0.03em;
+    /*padding-bottom: 4em;*/
+}
+section.geral{
+    height: 100vh;
+    background-image: none;
+    background-image: linear-gradient(#000, #00494C, #007a80);
+    background-attachment: fixed;
+    overflow-y: visible;
+}
+.geral{
+    padding-left: min(2rem, 6%);
+
+}
+.geral .interface {
+    display:flex;
+    align-items: top;
+    height: 100%;
+    padding-top: 9em;
+}
+.geral .interface .txt-geral {
+    font-size: clamp(1rem,1.4vw,1.4rem);
+    letter-spacing: 0.05rem;
+}
+.geral .interface .txt-geral h2{
+    font-size: clamp(1.5rem,1.9vw, 2.1rem);
+    width: 100%;
+    line-height:normal;
+    letter-spacing: 0.12rem;
+    margin-top:0;
+    margin-bottom: .5em;
+}
+.geral .interface .txt-geral h2 span {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    /*font-size: 170%;*/
+    font-size: clamp(2.3rem,2.3vw, 2.2rem);
+    line-height: 90%;
+    letter-spacing: 0.16rem;
+    display:block;
+}
+.geral .interface .txt-geral p, .geral .interface .txt-geral h3 {
+    margin-bottom:0.5em;
+    letter-spacing: 0.03em;
+}
+.geral .interface .txt-geral h3{
+    color: #a1e9ee;
+    margin-bottom:0.7em;
+}
+.geral .interface .txt-geral blockquote {
+    font-size: clamp(1.4rem,1.9vw, 2.2rem);
+    letter-spacing: 0.09rem;
+    margin-top: 1.8rem;
+    text-transform: uppercase;
+    color:#a1e9ee;
+}
+
+section.lista {
+    background-color: #000;
+}
+.geral .interface .txt-geral ul li{
+    list-style: none;
+    margin-bottom: 0.7rem;
+    background-image: url(../img/list-aokistorias.png);
+    background-repeat: no-repeat;
+    overflow-x:visible;
+    background-position-x:0rem;
+    padding-left:2.2rem;
+}
+.geral .interface .txt-geral h4 {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-size: 120%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    line-height: min(1.9rem,95%);
+    margin-bottom: 0.2rem;
+
+}
+.geral .interface .txt-geral h4 span {
+    font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;    
+    /*font-size: 100%;*/
+    font-size: clamp(1.1rem,1.55vw, 1.6rem);
+    text-transform: none;
+    letter-spacing: 0.06rem;
+    color:#a1e9ee;
+}
+.geral .interface .txt-geral iframe{
+    width: 100%;
+    height: auto;
+}
+
+.geral .interface .txt-geral button.tally {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-size: clamp(1.5rem, 180%, 2rem);
+    letter-spacing: 0.06rem;
+    background-color: #0869be;
+    color:aliceblue;
+    padding: .5rem .8rem;
+    margin: .6rem 0 1.5rem 0;
+    cursor: pointer;
+}
+.geral .interface .txt-geral button.tally:hover {
+    background-color: #a1e9ee;
+    color:#2c3e50;
+}
+ul.redesocial {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.6rem;
+}
+ul.redesocial li a:link {
+    color:#fff;
+    text-decoration: none;    
+}
+ul.redesocial li a:hover {
+    color:aqua;
+    text-decoration: underline;
+}
+ul.redesocial li.whats {
+    margin-bottom: .8rem;
+    background-image: url('../img/icon-whatsapp.png');
+    background-repeat: no-repeat;
+    background-position: left center; /* Alinha a imagem no meio do texto */
+    padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
+
+ul.redesocial li.whats a:link {
+    color:#fff;
+}
+ul.redesocial li.whats a:visited{
+    color:#ddd;
+    ;
+}
+}
+ul.redesocial li.insta {
+    margin-bottom: .4rem;
+    background-image: url('../img/icon-instagram.png');
+    background-repeat: no-repeat;
+    background-position: left center; /* Alinha a imagem no meio do texto */
+    padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
+}
+
+

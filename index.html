@@ -12,7 +12,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="assets/img/favicon-32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="assets/img/favicon-16.png">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/img/apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
+    <link rel="manifest" href="assets/img/site.webmanifest">
     <title>Comunicação Narrativa Visual | AOKISTORIAS</title>
     <meta name="description" content="Narrativas Visuais que ajudam empresas, organizações e pessoas a apresentar produtos, serviços e sua própria presença com clareza e conexão para que o seu público saiba, reconheça e aja.">
     <link rel="canonical" href="https://aokistorias.com.br/">
@@ -29,13 +29,11 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wdth,wght@0,75,100..900;1,75,100..900&display=swap" rel="stylesheet">
-    <link href="assets/font/LT-Comical.ttf" rel="stylesheet">
     <link rel="stylesheet" href="https://cloudflare.com">
     <link rel="stylesheet" href="assets/css/AokiS_V1.css">
 
     <script async src="https://tally.so/widgets/embed.js"></script>
     <script src="assets/js/btn-menu-mob.js"></script>
-    <style type="">
 
     </style>
 </head>
@@ -43,31 +41,12 @@
     <!-- ============ CABEÇALHO: logo e navegação ============ -->
     <header id="cabecalho">
         <div class="interface"> 
-            <section class="logo">
-                <a href="http://aokistorias.com.br" title="Logotipo Aokistorias">
-                    <img src="assets/img/logo-aokistorias-branco.png" alt="Comunicação Narrativa Visual" />
-                </a>
-            </section>
-
-            <section class="menu-desktop">
-                <nav class="nav" id="nav" aria-label="Navegação principal">
-                    <!-- Menu -->
-                    <ul class="">
-                        <li><a href="#home">Início ▲</a></li>
-                        <li><a href="#entender">Entenda ▼</a></li>
-                        <li><a href="#conectar">Conecte ▼</a></li>
-                        <li><a href="#transmitir">Transmita ▼</a></li>
-                        <li><a href="#transformar">Transforme ▼</a></li>
-                        <li><a href="#entregar">Entrego ▼</a></li>
-                        <li><a href="#conversar">Converse ▼</a></li>
-                    </ul>
-                </nav>
-            </section>
-            <section class="btn-contato">
-                <a class="btn btn--primary nav__cta" href="#">
-                    <button>Conheça minha proposta ▼</button>
-                </a>               
-            </section>
+            <nav class="nav" id="nav" aria-label="Navegação principal">
+                <section class="logo">
+                    <a href="http://aokistorias.com.br" title="Logotipo Aokistorias">
+                        <img src="assets/img/logo-aokistorias-branco.png" alt="Comunicação Narrativa Visual" />
+                    </a>
+                </section>
                 <!-- Checkbox invisível (gatilho do menu) -->
                 <input type="checkbox" id="menu-check" class="menu-toggle">
                 <!-- Botão Hambúrguer (à direita) -->
@@ -76,11 +55,22 @@
                     <span></span>
                     <span></span>
                 </label>
-<!--        <div class="btn-menu-mob" id="btn-menu-mob">
-                <div class="line-menumob-1"></div>
-                <div class="line-menumob-2"></div>          
-            </div>--> 
-
+                <!-- Menu -->
+                <ul class="menu-list">
+                    <li><a href="#home">Início ▲</a></li>
+                    <li><a href="#entender">Entenda ▼</a></li>
+                    <li><a href="#conectar">Conecte ▼</a></li>
+                    <li><a href="#transmitir">Transmita ▼</a></li>
+                    <li><a href="#transformar">Transforme ▼</a></li>
+                    <li><a href="#entregar">Entrego ▼</a></li>
+                    <li><a href="#conversar">Converse ▼</a></li>
+                </ul>
+                <!-- <section class="btn-contato">
+                    <a class="btn btn--primary nav__cta" href="#">
+                        <button>Conheça minha proposta ▼</button>
+                    </a>
+                </section> -->
+            </nav>
         </div>
        
     </header>
@@ -207,6 +197,16 @@
             </div>
         </div>
     </section>
+    <script>
+        const menuLinks = document.querySelectorAll('.menu-list a');
+        const checkbox = document.getElementById('menu-check');
+    
+        menuLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                checkbox.checked = false;
+            });
+        });
+    </script>
     
 </body>
 </html>

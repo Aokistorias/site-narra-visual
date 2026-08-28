@@ -73,13 +73,8 @@ body h1, body h2, body blockquote {
 header {
     max-width: 100%;
     padding: 0;
-    padding-left: min(2rem, 6%);
+    padding-left: min(1.2rem, 6%);
     padding-top:1.6rem;
-    /*padding-bottom: min(2rem, 6%);
-    /*border-style: outset;
-    border-left-width: 4px;
-    border-right-width: 4px;
-    border-color:aqua; */
     background-color: #000;
     position: fixed;
 }
@@ -130,7 +125,7 @@ header .btn-contato button{
     }
 }
 /* -- Menu de navegação -- */
-header .menu-desktop nav{
+header nav{
     padding: 0 20px;
     display: flex;
     align-items: center;
@@ -139,37 +134,45 @@ header .menu-desktop nav{
     position: relative;
 }
 
-header .menu-desktop nav ul {
+header nav ul {
     list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem;
     margin-left: 1rem;
     margin-right:1rem;
+    order: 3; /* vem depois do hamburguer no flex, mas no desktop fica normal */
 }
 
-.menu-desktop nav ul li{
-    display: inline-block;
+header nav ul li{
     margin: 0 1rem;
     font-size: 110%;
 }
-.menu-desktop nav ul li a:link {
+header nav ul li a{
+    display: block;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+nav ul li a:link {
     color: #fff;
     text-decoration: none;
 }
-.menu-desktop nav ul li a:visited {
+nav ul li a:visited {
     color: rgb(183, 183, 183);
 }
-.menu-desktop nav ul li a:focus {
+nav ul li a:focus {
     outline: 2px solid palegoldenrod;
 }
-.menu-desktop nav ul li a:hover {
+nav ul li a:hover {
     color: aqua;
     text-decoration:underline;
     transform: scale(1.1);
     transition: 0.2s;
 }
-.menu-desktop nav ul li:active {
+nav ul li:active {
     color:aquamarine;
 }
-.menu-desktop nav ul li:target {
+nav ul li:target {
     color:#fab433;
     text-decoration: overline;
 }
@@ -184,16 +187,6 @@ header .menu-desktop nav ul {
             position: relative;
             min-height: 60px;
         }
-
-        /* Logo (opcional, só para demonstrar o alinhamento) */
-        /*.menu-logo {
-            color: white;
-            font-size: 24px;
-            font-weight: bold;
-            text-decoration: none;
-            padding: 10px 0;
-            letter-spacing: 1px;
-        }*/
 
         /* Esconde o checkbox (gatilho invisível) */
         .menu-toggle {
@@ -227,15 +220,15 @@ header .menu-desktop nav ul {
         }
 
         /* --- LISTA DE NAVEGAÇÃO (horizontal no desktop) --- */
-        .menu-list {
+        /*.menu-list {
             list-style: none;
             display: flex;
             flex-wrap: wrap;
             gap: 5px;
-            order: 3; /* Vem depois do hambúrguer no flex, mas no desktop fica normal */
-        }
+            order: 3; /* Vem depois do hambúrguer no flex, mas no desktop fica normal 
+        }*/
 
-        .menu-list li a {
+        /*.menu-list li a {
             display: block;
             padding: 15px 20px;
             color: white;
@@ -248,7 +241,7 @@ header .menu-desktop nav ul {
 
         .menu-list li a:hover {
             background-color: #34495e;
-        }
+        }*/
 
         /* --- RESPONSIVIDADE (MOBILE) --- */
         @media screen and (max-width: 768px) {
@@ -258,40 +251,48 @@ header .menu-desktop nav ul {
             }
 
             /* A lista vira um menu vertical escondido */
-            .menu-list {
+            header nav ul {
                 display: none;
                 width: 100%;
                 flex-direction: column;
-                background-color: #fff;
+                background-color:transparent;
                 padding: 10px 0;
                 order: 4; /* Fica depois de tudo no mobile */
-                border-top: 1px solid #ffff20;
+                /*border-top: 1px solid #ccc;*/
                 margin-top: 10px;
             }
 
-            .menu-list li {
+            header nav ul li {
                 width: 100%;
+                
                 text-align: center;
             }
 
-            .menu-list li a {
-                padding: 14px 20px;
-                border-bottom: 1px solid #3d566e;
+            header nav ul li a {
+                padding: 14px 0;
+                /*border-bottom: 1px solid #3d566e;*/
                 white-space: normal;
                 border-radius: 0;
+                font-size:inherit;
+            }
+            header nav ul li a:link {
+                background-color:#0869be;
+                color:#a1e9ee;
             }
 
-            .menu-list li a:hover {
-                background-color: #34495e;
+            header nav ul li a:hover {
+                background-color:#a1e9ee;
+                color:#0869be;
             }
 
-            .menu-list li:last-child a {
+            header nav ul li:last-child a {
                 border-bottom: none;
             }
 
             /* --- ABRIR O MENU (CHECKBOX HACK) --- */
             .menu-toggle:checked ~ .menu-list {
                 display: flex;
+                /*display: block;*/
             }
 
             /* --- ANIMAÇÃO HAMBÚRGUER → X (FORMA 2) --- */
@@ -319,7 +320,7 @@ header .menu-desktop nav ul {
 
         /* Ajuste para telas muito pequenas (ex: 320px) */
         @media (max-width: 400px) {
-            .menu-list li a {
+            .menu-desktop li a {
                 font-size: 14px;
                 padding: 12px 10px;
             }
@@ -342,51 +343,6 @@ header .menu-desktop nav ul {
                 transform: translateY(-6.5px) rotate(-45deg);
             }
         }
-/*  @media screen and (max-width: 878px) {
-    /* Responsivo do hero */
-    /*.hero-site .txt-hero h1{
-        font-size: 2.6em;
-        line-height: 45px;
-    }
-    .hero-site .txt-hero p{
-        font-size: 14px;
-    }
-    .hero-site .txt-hero p span{
-        display: inline;
-    }
-    .hero-site button{
-        font-size: 18px;
-    }
-}*/
-
-/* -- Estilo do botão do menu mobile -- */
-
-/*header .btn-menu-mob {
-    display:none;
-}
-header .btn-menu-mob div{
-    background-color: #fff;
-    height: 3px;
-    margin: 10px 0;
-    transition: .2s;
-}
-header .btn-menu-mob .line-menumob-1{
-    width: 30px;
-}
-header .btn-menu-mob .line-menumob-2{
-    width: 20px;
-}
-header.rolar .btn-menu-mob div{
-    background-color:#000;
-}
-header .btn-menu-mob .line-menumob-1.ativo1 {
-    transform: rotate(45deg) translate(30%);
-}
-header .btn-menu-mob .line-menumob-2.ativo2 {
-    transform: rotate(-45deg) translate(30%);
-    width: 30px;
-}*/
-
 
 header .btn-contato button{
     font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", sans-serif;
@@ -404,6 +360,15 @@ header .btn-contato button{
 header .btn-contato button:hover {
     color: #0869be;
     background-color: #a1e9ee;
+}
+/* ---- Para celulares ---- */
+}@media screen and (max-width: 768px){
+    header .interface .btn-contato {
+        float:none;
+        display: block;
+        padding-left: 13rem;
+        padding-right: 13rem;
+    }
 }
 section.hero-site{
     height: 100vh;
@@ -507,7 +472,7 @@ section.lista {
     background-repeat: no-repeat;
     overflow-x:visible;
     background-position-x:0rem;
-    padding-left:2.2rem;
+    padding-left:2.4rem;
 }
 .geral .interface .txt-geral h4 {
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
@@ -585,5 +550,3 @@ ul.redesocial li.insta {
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
 }
-
-

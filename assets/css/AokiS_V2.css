@@ -105,10 +105,10 @@ header .logo img {
     }
     .interface {
         padding-left: 1rem;
-        padding-right: .5rem;
+        padding-right: 0.5rem;
     }
     section#home {
-        background-position-x: 300px;
+        background-position-x: 250px;
     }
     section#home .interface h1 {
         width: 60%;

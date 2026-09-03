@@ -1,0 +1,585 @@
+*, html{
+    margin: 0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Noto Sans Condensed";
+    src: url(assets/fonts/NotoSans_Condensed-Regular.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Bold";
+    src: url(assets/fonts/NotoSans_Condensed-Bold.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Bold Italic";
+    src: url(assets/fonts/NotoSans_Condensed-BoldItalic.ttf);
+}
+@font-face {
+    font-family: "Noto Sans Condensed Italic";
+    src: url(assets/fonts/NotoSans_Condensed-Italic.ttf);
+}
+@font-face {
+  font-family: 'LT Comical Medium';
+  font-style: normal;
+  font-weight: normal;
+  src: local('LT Comical Medium'), 
+       url('../fonts/LT-Comical.woff') format('woff');
+}
+body{
+    background-color: #007a8a;
+    background-image: linear-gradient(to bottom, #000, #00494C, #007a8a);
+    color: white;
+    background-attachment: fixed;
+    background-position: center center;
+}
+body a:link{ /*color: yellow;*/
+    color:#fab433;
+}
+body a:visited{
+    color:#bbb;
+}
+
+body p, body span, body a, body h3, body li {
+  font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
+}
+body h1, body h2, body button, body blockquote {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-weight: normal;
+    letter-spacing: 0.05em;
+}
+
+.noto-sans-<uniquifier> {
+  font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 75;
+}
+.interface, .geral .interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+/* ==== Cabeçalho do site ==== */
+
+header {
+    max-width: 100%;
+    padding: 0;
+    padding-left: min(1.2rem, 6%);
+    padding-top:1.6rem;
+    background-color: #000;
+    position: fixed;
+}
+
+header .logo img {
+    max-width: 80px;
+}
+
+/* ---- Para Tablets ---- */
+@media screen and (max-width: 1200px){
+    section#home {
+        background-position-x: 600px;
+    }
+    section#home .interface h1 {
+        line-height: 105%;
+    }
+    .interface {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+/* ---- Para celulares ---- */
+}@media screen and (max-width: 900px) {
+    header .menu-desktop {
+        display:none;
+    }
+    header .btn-menu-mob{
+        display: block;
+    }
+    .interface {
+        padding-left: 2rem;
+        padding-right: 1rem;
+    }
+    section#home {
+        background-position-x: 300px;
+    }
+    section#home .interface h1 {
+        width: 60%;
+        line-height: 100%;
+    }
+}
+/* -- Menu de navegação (base) -- */
+header nav{
+    padding: 0 0.3rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo (esquerda) */
+    flex-wrap: wrap; /* Permite quebra para o menu mobile */
+    position: relative;
+}
+header nav .logo {
+    order: 1;
+}
+header nav .menu {
+    order: 2;/* vem depois do hamburguer no flex, mas no desktop fica normal */
+}
+
+header nav ul {
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between; /* Espaça logo (esquerda) e hambúrguer (direita) */
+    gap: 0.3rem;
+    margin-left: 1rem;
+    margin-right:1rem;
+}
+
+header nav ul li{
+    margin: 0 1rem;
+    font-size: 110%;
+}
+header nav ul li a{
+    display: block;
+    transition: background-color 0.3s;
+    white-space: nowrap;
+}
+nav ul li a:link {
+    color: #fff;
+    text-decoration: none;
+}
+nav ul li a:visited {
+    color: #bbb;
+}
+nav ul li a:focus {
+    outline: 2px solid palegoldenrod;
+}
+nav ul li a:hover {
+    color: aqua;
+    text-decoration:underline;
+    transform: scale(1.1);
+    transition: 0.2s;
+}
+nav ul li:active {
+    color:aquamarine;
+}
+nav ul li:target, nav ul li a.active {
+    color:#f7d493;
+    text-decoration: overline;
+    transform: none;
+}
+        /* Esconde o checkbox (gatilho invisível) */
+        .menu-toggle {
+            display: none;
+        }
+
+        /* --- BOTÃO HAMBÚRGUER (ALINHADO À DIREITA) --- */
+        .menu-hamburger {
+            display: none; /* Escondido no desktop */
+            flex-direction: column;
+            gap: 5px;
+            cursor: pointer;
+            padding: 10px;
+            width: 44px;
+            height: 44px;
+            justify-content: center;
+            align-items: center;
+            /* margin-left: auto; */ /* Não precisa com o space-between */
+            order: 4; /* Garante que fique depois do logo no flex */
+        }
+
+        /* Cada linha do hambúrguer */
+        .menu-hamburger span {
+            display: block;
+            width: 30px;
+            height: 3px;
+            background-color: white;
+            border-radius: 3px;
+            transition: all 0.4s ease-in-out;
+            transform-origin: center;
+        }
+
+        /* --- RESPONSIVIDADE (MOBILE) --- */
+        @media screen and (max-width: 768px) {
+            /* Mostra o hambúrguer */
+            .menu-hamburger {
+                display: flex;
+                margin-left: 2rem;
+                margin-right: 2rem;
+                order:4;
+            }
+            header nav{
+                align-items: normal;
+            }
+            header, header .interface{
+                background-color: transparent;
+            }
+            header .interface nav{
+                background-color: #000;
+            }
+
+            /* A lista vira um menu vertical escondido */
+            header nav ul {
+                display: none;
+                width: 100%;
+                flex-direction: column;
+                background-color:transparent;
+                padding: 0.5rem 0;
+                /* Fica depois de tudo no mobile */
+                /*border-top: 1px solid #ccc;*/
+                margin-top: 0.5rem;
+            }
+
+            header nav ul li {
+                width: 100%;
+                text-align: center;
+            }
+
+            header nav ul li a {
+                padding: 0.8rem 0;
+                /*border-bottom: 1px solid #3d566e;*/
+                white-space: normal;
+                border-radius: 0;
+                font-size:inherit;
+            }
+            header nav ul li a:link {
+                background-color:#0869be;
+                color:#a1e9ee;
+            }
+
+            header nav ul li a:hover {
+                background-color:#a1e9ee;
+                color:#0869be;
+            }
+
+            header nav ul li:last-child a {
+                border-bottom: none;
+            }
+            header nav ul li a:link.active{
+                background-color: #e74c3c;
+                color: #f7d493;
+                transform: none;
+            }
+
+            /* --- ABRIR O MENU (CHECKBOX HACK) --- */
+            .menu-toggle:checked ~ .menu-list {
+                display: flex;
+                /*display: block;*/
+            }
+
+            /* --- ANIMAÇÃO HAMBÚRGUER → X (FORMA 2) --- */
+            /* Quando o checkbox está marcado, as linhas se transformam */
+            .menu-toggle:checked ~ .menu-hamburger span {
+                background-color: #fab433; /* Muda para ouro (opcional) */
+            }
+
+            /* Linha 1 (superior) → gira 45° para baixo */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(1) {
+                transform: translateY(8px) rotate(45deg);
+            }
+
+            /* Linha 2 (meio) → desaparece */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(2) {
+                opacity: 0;
+                transform: scaleX(0);
+            }
+
+            /* Linha 3 (inferior) → gira -45° para cima */
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(3) {
+                transform: translateY(-8px) rotate(-45deg);
+            }
+        }
+
+        /* Ajuste para telas muito pequenas (ex: 320px) */
+        @media (max-width: 400px) {
+            .menu-desktop li a {
+                font-size: 14px;
+                padding: 12px 10px;
+            }
+
+            .menu-hamburger {
+                width: 38px;
+                height: 38px;
+            }
+
+            .menu-hamburger span {
+                width: 25px;
+                height: 2.5px;
+            }
+
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(1) {
+                transform: translateY(6.5px) rotate(45deg);
+            }
+
+            .menu-toggle:checked ~ .menu-hamburger span:nth-child(3) {
+                transform: translateY(-6.5px) rotate(-45deg);
+            }
+        }
+/*header .btn-contato a.btn {
+    display: block;
+    float: right;*/
+    /*text-decoration: none;*/
+    /*margin-left:2rem;
+    margin-right:1rem;}*/
+header nav .btn-contato{
+    order:3;
+}
+header .btn-contato .btn a {
+    text-decoration: none;
+    text-decoration-line: none;
+    text-decoration-color: transparent;
+    display:block;
+    width: 120px;
+    height: auto;
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-weight: normal;
+    font-size: 110%;
+    line-height: 110%;
+    padding: 0.3rem 0.5rem;
+    text-align:center;
+    text-transform: uppercase;
+    border: 3px solid #fff;
+    border-right-color: #007a8a;
+    border-bottom-color: #0869be;
+    background-color:#a1e9ee;
+    color: #00494C;
+}
+header .btn-contato .btn a:hover {
+    color: #a1e9ee;
+    background-color: #007a8a;
+    transform: scale(1.1);
+    transition: 0.2s;
+    border-color: #a1e9ee;
+    border-right-color: #348edd;
+    border-bottom-color: #1262d2;
+}
+header .btn-contato .btn a:link.active{
+    color:#f7d493;
+    background-color: #e74c3c;
+    transform: none;
+}
+
+/* ---- Para celulares ---- */
+}@media screen and (max-width: 768px){
+    header nav{
+        width: 100%;
+    }
+    header nav .btn-contato{
+        order:2;
+        margin-left: auto;
+        margin-right: auto;
+    }
+    header nav .menu {
+        order: 3;/* vem depois do hamburguer no flex, mas no desktop fica normal */
+    }
+    header .btn-contato a.btn {
+        padding-left: 2rem;
+        padding-right:2rem;
+    }
+}
+section.hero-site{
+    height: 100vh;
+    background-image: url(../img/arcoiris-dir-bkg.png);
+    background-repeat: no-repeat;
+    background-position-x: right;
+    background-position-y:top;
+    }
+    @media screen and (max-width: 768px) {
+        section.hero-site{
+            background-position-x: 370px;
+        }
+    }
+
+.hero-site .interface {
+    display: flex;
+    align-items: center;
+    height: 100%;
+}
+
+.hero-site .txt-hero {
+    margin: min(2rem, 9%);
+    font-size: clamp(0.9rem,1.1vw,1.25rem);
+    letter-spacing: 0.03em;
+}
+
+.hero-site .txt-hero h1 {
+    font-size: clamp(3.2em,4vw,4em);
+    line-height: 1.25rem;
+    margin-bottom: 1.8rem;
+}
+
+.hero-site .txt-hero h2 {
+    font-size: clamp(1.5rem,1.9vw, 2.1rem);
+    line-height: normal;
+    width: 60%;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.hero-site .txt-hero p {
+    font-size: clamp(1rem,1.4vw,1.4rem);
+    letter-spacing: 0.03em;
+    /*padding-bottom: 4em;*/
+}
+section.geral{
+    /*height: 100vh;*/
+    background-image: none;
+    background-image: linear-gradient(#000, #00494C, #007a80);
+    background-attachment: fixed;
+    /*overflow-y: visible;*/
+}
+.geral{
+    padding-left: min(2rem, 6%);
+
+}
+.geral .interface {
+    display:flex;
+    align-items: top;
+    height: 100%;
+    padding-top: 9em;
+}
+.geral .interface .txt-geral {
+    font-size: clamp(1rem,1.4vw,1.4rem);
+    letter-spacing: 0.05rem;
+    overflow-y:visible;
+}
+.geral .interface .txt-geral h2{
+    font-size: clamp(1.3rem,1.5vw, 1.7rem);
+    width: 100%;
+    line-height:normal;
+    letter-spacing: 0.12rem;
+    margin-top:0;
+    margin-bottom: .5em;
+}
+.geral .interface .txt-geral h2 span {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    /*font-size: 170%;*/
+    font-size: clamp(1.7rem,2.5vw, 2.6rem);
+    line-height: 90%;
+    letter-spacing: 0.16rem;
+    display:block;
+}
+.geral .interface .txt-geral p, .geral .interface .txt-geral h3 {
+    margin-bottom:0.8em;
+    letter-spacing: 0.03em;
+}
+.geral .interface .txt-geral h3{
+    color: #a1e9ee;
+    margin-bottom:0.7em;
+}
+.geral .interface .txt-geral blockquote {
+    font-size: clamp(1.4rem,1.9vw, 2.2rem);
+    letter-spacing: 0.09rem;
+    margin-top: 1.8rem;
+    text-transform: uppercase;
+    color:#a1e9ee;
+}
+
+@media screen and (max-width: 768px) {
+    .geral .interface p.desencavala{
+        display: block;
+        margin-top: 12rem;
+    }
+}
+section.lista {
+    background-color: #000;
+}
+.geral .interface .txt-geral ul li{
+    list-style: none;
+    margin-bottom: 0.7rem;
+    background-image: url(../img/list-aokistorias.png);
+    background-repeat: no-repeat;
+    overflow-x:visible;
+    background-position-x:0rem;
+    padding-left:2.4rem;
+}
+.geral .interface .txt-geral h3.soluciono{
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    text-transform: uppercase;
+    letter-spacing: 0.11rem;
+    font-size: 130%;
+    margin-top: 1.2rem;
+}
+.geral .interface .txt-geral h4 {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-size: 120%;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.08rem;
+    line-height: min(1.9rem,95%);
+    margin-bottom: 0.2rem;
+
+}
+.geral .interface .txt-geral h4 span {
+    font-family: "Noto Sans", "Roboto Condensed", "Arial-Narrow", "Helvetica Neue", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: bold;
+    font-style: normal;
+    font-variation-settings: "wdth" 75;    
+    /*font-size: 100%;*/
+    font-size: clamp(1.1rem,1.55vw, 1.6rem);
+    text-transform: none;
+    letter-spacing: 0.06rem;
+    color:#a1e9ee;
+}
+.geral .interface .txt-geral iframe{
+    width: 100%;
+    height: auto;
+}
+
+.geral .interface .txt-geral button.tally {
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-size: clamp(1.5rem, 180%, 2rem);
+    letter-spacing: 0.06rem;
+    background-color: #0869be;
+    color:aliceblue;
+    padding: .5rem .8rem;
+    margin: .6rem 0 1.5rem 0;
+    cursor: pointer;
+}
+.geral .interface .txt-geral button.tally:hover {
+    background-color: #a1e9ee;
+    color:#2c3e50;
+}
+ul.redesocial {
+    list-style: none;
+    padding-left: 0;
+    font-size: 1.6rem;
+}
+ul.redesocial li a:link {
+    color:#fff;
+    text-decoration: none;    
+}
+ul.redesocial li a:hover {
+    color:aqua;
+    text-decoration: underline;
+}
+ul.redesocial li.whats {
+    margin-bottom: .8rem;
+    background-image: url('../img/icon-whatsapp.png');
+    background-repeat: no-repeat;
+    background-position: left center; /* Alinha a imagem no meio do texto */
+    padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
+
+ul.redesocial li.whats a:link {
+    color:#fff;
+}
+ul.redesocial li.whats a:visited{
+    color:#ddd;
+    ;
+}
+}
+ul.redesocial li.insta {
+    margin-bottom: .4rem;
+    background-image: url('../img/icon-instagram.png');
+    background-repeat: no-repeat;
+    background-position: left center; /* Alinha a imagem no meio do texto */
+    padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
+}

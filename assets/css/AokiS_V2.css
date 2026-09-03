@@ -67,15 +67,22 @@ body h1, body h2, body button, body blockquote {
     max-width: 1280px;
     margin: 0 auto;
 }
+@media screen and (max-width: 768px) {
+    .interface, .geral .interface{
+        margin-left: 0.5rem;
+        margin-right: 0.3rem;
+    }
+}
 
 /* ==== Cabeçalho do site ==== */
 
 header {
     max-width: 100%;
     padding: 0;
-    padding-left: min(1.2rem, 6%);
+    padding-left: min(1.1rem, 6%);
     padding-top:1.6rem;
     background-color: #000;
+    background-image:linear-gradient(#000, #091214);
     position: fixed;
 }
 
@@ -104,12 +111,15 @@ header .logo img {
         display: block;
     }
     .interface {
-        padding-left: 1rem;
-        padding-right: 0.5rem;
+        padding-left: 0.8rem;
+        padding-right: 0.6rem;
     }
     section#home {
         background-position-x: 250px;
     }
+    /*section.hero-site{
+        background-position-x: 280px;
+    }*/
     section#home .interface h1 {
         width: 60%;
         line-height: 100%;
@@ -234,7 +244,10 @@ nav ul li:target, nav ul li a.active {
                 padding: 0.5rem 0;
                 /* Fica depois de tudo no mobile */
                 /*border-top: 1px solid #ccc;*/
-                margin-top: 0.5rem;
+                margin-top: 1.5rem;
+            }
+            header nav ul.menu-list{
+                margin-top:1.7rem;    
             }
 
             header nav ul li {
@@ -393,7 +406,7 @@ section.hero-site{
     }
     @media screen and (max-width: 768px) {
         section.hero-site{
-            background-position-x: 370px;
+            background-position-x: 270px;
         }
     }
 
@@ -404,19 +417,20 @@ section.hero-site{
 }
 
 .hero-site .txt-hero {
-    margin: min(2rem, 9%);
+    margin: min(1.2rem, 9%);
     font-size: clamp(0.9rem,1.1vw,1.25rem);
-    letter-spacing: 0.03em;
+    letter-spacing: 0.03rem;
 }
 
 .hero-site .txt-hero h1 {
-    font-size: clamp(3.2em,4vw,4em);
+    font-size: clamp(2.4em,3.5vw,4rem);
     line-height: 1.25rem;
     margin-bottom: 1.8rem;
+    text-transform: uppercase;
 }
 
 .hero-site .txt-hero h2 {
-    font-size: clamp(1.5rem,1.9vw, 2.1rem);
+    font-size: clamp(1.3rem,1.8vw, 2.0rem);
     line-height: normal;
     width: 60%;
     margin-top: 1rem;
@@ -471,23 +485,25 @@ section.geral{
     letter-spacing: 0.03em;
 }
 .geral .interface .txt-geral h3{
+    font-size: clamp(1.20rem, 1.48vw, 1.9rem);
+    text-transform: uppercase;
     color: #a1e9ee;
-    margin-bottom:0.7em;
+    margin-top:1.1rem;
+    margin-bottom:0.8rem;
 }
 .geral .interface .txt-geral blockquote {
-    font-size: clamp(1.4rem,1.9vw, 2.2rem);
+    font-size: clamp(1.25rem,1.75vw, 1.7rem);
     letter-spacing: 0.09rem;
     margin-top: 1.8rem;
     text-transform: uppercase;
     color:#a1e9ee;
 }
-
 @media screen and (max-width: 768px) {
-    .geral .interface p.desencavala{
-        display: block;
-        margin-top: 12rem;
-    }
+    .geral .interface .txt-geral blockquote{
+        letter-spacing: 0.081rem;
+    }   
 }
+
 section.lista {
     background-color: #000;
 }
@@ -504,7 +520,7 @@ section.lista {
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.11rem;
-    font-size: 130%;
+    font-size: 120%;
     margin-top: 1.2rem;
 }
 .geral .interface .txt-geral h4 {

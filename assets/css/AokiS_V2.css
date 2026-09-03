@@ -96,7 +96,7 @@ header .logo img {
         padding-right: 1rem;
     }
 /* ---- Para celulares ---- */
-}@media screen and (max-width: 900px) {
+}@media screen and (max-width: 768px) {
     header .menu-desktop {
         display:none;
     }
@@ -104,8 +104,8 @@ header .logo img {
         display: block;
     }
     .interface {
-        padding-left: 2rem;
-        padding-right: 1rem;
+        padding-left: 1rem;
+        padding-right: .5rem;
     }
     section#home {
         background-position-x: 300px;

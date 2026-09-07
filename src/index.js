@@ -10,6 +10,14 @@ export default {
         }
       });
     }
+    //Teste de conexão do Worker
+    if (url.pathname === "/api/versao") {
+      return new Response("Versão 2 do Worker", {
+        headers: {
+          "Content-Type": "text/plain; charset=UTF-8"
+        }
+      });
+    }
 
     // Teste da conexão com o banco D1
     if (url.pathname === "/api/teste-db") {

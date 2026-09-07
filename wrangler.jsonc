@@ -6,4 +6,11 @@
         "directory": ".",
         "binding": "ASSETS"
     }
+    "d1_databases": [
+        {
+            "binding": "DB",
+            "database_name": "leads-site-db",
+            "database_id": "77ed6b48-2b21-425b-a801-a178530bfffe"
+        }
+    ]
 }

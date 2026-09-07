@@ -10,14 +10,6 @@ export default {
         }
       });
     }
-    //Teste de conexão do Worker
-    if (url.pathname === "/api/versao") {
-      return new Response("Versão 2 do Worker", {
-        headers: {
-          "Content-Type": "text/plain; charset=UTF-8"
-        }
-      });
-    }
 
     // Teste da conexão com o banco D1
     if (url.pathname === "/api/teste-db") {
@@ -38,6 +30,43 @@ export default {
       } catch (erro) {
         return new Response(
           `Erro ao acessar o banco: ${erro.message}`,
+          {
+            status: 500,
+            headers: {
+              "Content-Type": "text/plain; charset=UTF-8"
+            }
+          }
+        );
+      }
+    }
+
+    // Teste de gravação no banco D1
+    if (url.pathname === "/api/teste-gravar" && request.method === "POST") {
+      try {
+        const resultado = await env.DB
+          .prepare(`
+            INSERT INTO mensagens (nome, email, mensagem)
+            VALUES (?, ?, ?)
+          `)
+          .bind(
+            "Teste",
+            "teste@example.com",
+            "Registro de teste do formulário"
+          )
+          .run();
+
+        return new Response(
+          `Registro criado. ID: ${resultado.meta.last_row_id}`,
+          {
+            headers: {
+              "Content-Type": "text/plain; charset=UTF-8"
+            }
+          }
+        );
+
+      } catch (erro) {
+        return new Response(
+          `Erro ao gravar no banco: ${erro.message}`,
           {
             status: 500,
             headers: {

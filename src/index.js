@@ -1,7 +1,7 @@
 export default {
   async fetch(request, env) {
     const url = new URL(request.url);
-
+    
     // Teste básico do Worker
     if (url.pathname === "/api/teste") {
       return new Response("Worker funcionando!", {

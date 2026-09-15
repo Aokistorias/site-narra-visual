@@ -485,6 +485,29 @@ section.hero-site{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
+.interface img.quemsou {
+    display:block;
+    background-color: #fff;
+    padding: 0.5rem;
+    float:right;
+    max-width: 100%;
+    height: auto;
+    margin-top: 0.4rem;
+    margin-left: 1rem;
+    margin-bottom: 0.4rem;
+}
+@media screen and (max-width: 1200px) {
+    .interface img.quemsou {
+        max-width:70%;
+        width:14rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    .interface img.quemsou {
+        
+    }
+}
+
 /* =========== fim das Imagens ILUSTRATIVAS =========== */
 
 /* ========== Seções GERAL =========== */

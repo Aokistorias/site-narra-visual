@@ -55,7 +55,7 @@ body h1, body h2, body h4, body button, body blockquote {
     letter-spacing: 0.05em;
 }
 
-.interface, .geral .interface {
+.interface, .geral .interface, .hero-site .interface {
     max-width: 1280px;
     margin: 0 auto;
 }
@@ -411,7 +411,7 @@ header .btn-contato .btn a:link.active{
 
 /* ============= Seção HERO do Site ============ */
 section.hero-site{
-    height: 100vh;
+    /* height: 100vh; */
     background-image: url(../img/arcoiris-dir-so.png);
     background-repeat: no-repeat;
     background-position-x: right;
@@ -462,7 +462,8 @@ section.hero-site{
 }
 /* ========== fim do HERO =========== */
 
-.interface img.capitulo {
+/* ========== imagens ILUSTRATIVAS dos capítulos ========= */
+.interface img.capitulo, .hero-site .interface img.capitulo {
     display: block;
     background-color: #fff;
     padding: .5rem;
@@ -471,6 +472,7 @@ section.hero-site{
     margin-top: 1.5rem;
     margin-bottom: 1rem;
 }
+/* =========== fim das Imagens ILUSTRATIVAS =========== */
 
 /* ========== Seções GERAL =========== */
 section.geral{
@@ -534,6 +536,9 @@ section.geral{
         letter-spacing: 0.081rem;
     }   
 }
+/* ========== fim das Seções GERAIS ========== */
+
+/* ======== específico para ENTREGAS ========= */
 
 section.lista {
     /*background-color: #000;*/
@@ -576,6 +581,10 @@ section.lista {
     letter-spacing: 0.06rem;
     color:#a1e9ee;
 }
+/* ======== fim para ENTREGAS ========== */
+
+/* ======== específico para CONTATO ========== */
+
 .geral .interface .txt-geral iframe{
     width: 100%;
     height: auto;
@@ -630,3 +639,4 @@ ul.redesocial li.insta {
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
 }
+/* ========== fim para CONTATO ========== */

@@ -380,7 +380,7 @@ header .btn-contato .btn a:link.active{
 }
 @media screen and (max-width: 768px) {
     header .logo img{
-        margin-right: 1.4rem;
+        margin-right: 1rem;
     }
 }
 /* ----- fim do BOTÃO de CONTATO ----- */

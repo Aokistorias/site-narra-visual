@@ -221,8 +221,8 @@ nav ul li:target, nav ul li a.active {
                 gap: 0rem;
             }
             header nav ul li {
-                margin: 0 0.09rem;
-                font-size: 0.8rem;
+                margin: 0 0.3em;
+                font-size: 1rem;
             }
         }
 
@@ -407,11 +407,11 @@ header .btn-contato .btn a:link.active{
 /* ---- Para Tablets ---- */
 @media screen and (max-width: 1200px) {
     header .btn-contato .btn a {
-        font-size:80%;
-        width: 4.2rem;
+        font-size:90%;
+        width: 4.8rem;
         padding-top:0.23rem;
         padding-bottom: 0.21rem;
-        padding: 0.23rem 0.1rem 0.22rem 0.1rem;
+        padding: 0.24rem 0.2rem 0.22rem 0.2rem;
     }
 }
 

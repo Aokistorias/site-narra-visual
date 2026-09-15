@@ -259,10 +259,13 @@ nav ul li:target, nav ul li a.active {
                 /* Fica depois de tudo no mobile */
                 /*border-top: 1px solid #ccc;*/
                 margin-top: 1.5rem;
+                
             }
             header nav ul.menu-list{
                 margin-top:1.7rem;
                 background-color: #000;
+                margin-left: -5rem;
+                width: 9rem;
             }
 
             header nav ul li {
@@ -664,7 +667,7 @@ section.lista {
     background-color: #0869be;
     color:aliceblue;
     padding: .5rem .8rem;
-    margin: .6rem 0 1.5rem 0;
+    margin: 2.6rem 0 1.5rem 0;
     cursor: pointer;
 }
 .geral .interface .txt-geral button.tally:hover {

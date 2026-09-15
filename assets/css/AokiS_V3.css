@@ -404,11 +404,11 @@ header .btn-contato .btn a:link.active{
 /* ---- Para Tablets ---- */
 @media screen and (max-width: 1200px) {
     header .btn-contato .btn a {
-        font-size:90%;
-        width: 5.5rem;
-        padding-top:0.3rem;
-        padding-bottom: 0.33rem;
-        padding: 0.3rem 0.2rem 0.33rem 0.2rem;
+        font-size:70%;
+        width: 5rem;
+        padding-top:0.23rem;
+        padding-bottom: 0.21rem;
+        padding: 0.25rem 0.2rem 0.24rem 0.2rem;
     }
 }
 
@@ -431,8 +431,8 @@ header .btn-contato .btn a:link.active{
         width:5.6rem;
         padding-left: 0.6rem;
         padding-right:0.6rem;
-        padding-top: 0.3rem;
-        padding-bottom: 0.35rem;
+        padding-top: 0.31rem;
+        padding-bottom: 0.3rem;
     }
 }
 /* ============= fim da NAVEGAÇÃO ============ */

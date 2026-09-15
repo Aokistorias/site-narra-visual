@@ -215,14 +215,14 @@ nav ul li:target, nav ul li a.active {
         /* --- RESPONSIVIDADE (TABLET) --- */
         @media screen and (max-width: 1280px) {
             header nav {
-                padding: 0.14rem;
+                padding: 0.10   rem;
             }
             header nav ul {
                 gap: 0rem;
             }
             header nav ul li {
-                margin: 0 0.3em;
-                font-size: 1rem;
+                margin: 0 0.2em;
+                font-size: 0.95rem;
             }
             header .logo img{
                 max-width:55px;

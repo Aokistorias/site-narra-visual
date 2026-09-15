@@ -72,7 +72,7 @@ header {
     max-width: 100%;
     padding: 0;
     padding-left: min(1.1rem, 6%);
-    padding-top:1.6rem;
+    padding-top:1.5rem;
     background-color: transparent;
     background-image:linear-gradient(#000, #091214);
     position: fixed;
@@ -461,7 +461,7 @@ section.hero-site{
     display: flex;
     /*align-items:center;*/
     height: 100%;
-    padding-top: 6rem;
+    padding-top: 8rem;
 }
 
 .hero-site .txt-hero {
@@ -490,6 +490,9 @@ section.hero-site{
     /*padding-bottom: 4em;*/
 }
 @media (max-width: 1280px){
+    .hero-site .interface {
+        padding-top:6rem;
+    }
     .hero-site .txt-hero h2{
         width: 60%;
     }
@@ -533,7 +536,8 @@ section.hero-site{
 }
 @media screen and (max-width: 768px) {
     .interface img.quemsou {
-        
+        max-width:60%;
+        width:12rem;
     }
 }
 

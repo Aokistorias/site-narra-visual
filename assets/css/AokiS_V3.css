@@ -646,7 +646,7 @@ section.geral{
 section.lista {
     /*background-color: #000;*/
 }
-.geral .interface .txt-geral ul li{
+section#entregar .interface .txt-geral ul li{
     list-style: none;
     margin-bottom: 0.7rem;
     background-image: url(../img/list-aokistorias.png);
@@ -720,7 +720,7 @@ ul.redesocial li a:hover {
     color:aqua;
     text-decoration: underline;
 }
-ul.redesocial li.whats {
+.geral .interface .txt-geral .redesocial li.whats {
     margin-bottom: .8rem;
     background-image: url('../img/icon-whatsapp.png');
     background-repeat: no-repeat;
@@ -735,7 +735,7 @@ ul.redesocial li.whats a:visited{
     ;
 }
 }
-ul.redesocial li.insta {
+ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.insta {
     margin-bottom: .4rem;
     background-image: url('../img/icon-instagram.png');
     background-repeat: no-repeat;

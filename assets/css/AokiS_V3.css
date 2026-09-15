@@ -544,6 +544,31 @@ section.geral{
     background-attachment: fixed;
     /*overflow-y: visible;*/
 }
+
+/* --- alternância de fundos e cores entre as seções --- SÓ P CELULAR --- */
+@media screen and (max-width: 768px) {
+    section#entender, section#transmitir, section#entregar {
+        background-color:#a1e9ee;
+        background-image: linear-gradient(#34c4dd, #fff);
+        background-attachment:local;
+        color:#00494C;
+    }
+    section#entender blockquote, section#transmitir blockquote, section#entregar blockquote {
+        color:#0853bc;
+        margin-bottom:2rem;
+    }
+    section#entender h3, section#transmitir h3, section#entregar h3 {
+        color:#0853bc;
+    }
+    section#entregar li {
+        background-image:url(../img/list-aokistorias.pos.png);
+    }
+    section#entregar h4 span {
+        color:#0853bc;
+    }
+}
+/*--- fim da alternância entre seções --- */
+
 .geral{
     padding-left: min(2rem, 6%);
 
@@ -598,6 +623,7 @@ section.geral{
     font-size: clamp(1.25rem,1.75vw, 1.7rem);
     letter-spacing: 0.09rem;
     margin-top: 1.8rem;
+    margin-bottom: 2rem;
     text-transform: uppercase;
     color:#a1e9ee;
 }

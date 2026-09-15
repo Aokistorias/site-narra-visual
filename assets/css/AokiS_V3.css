@@ -224,6 +224,9 @@ nav ul li:target, nav ul li a.active {
                 margin: 0 0.3em;
                 font-size: 1rem;
             }
+            header .logo img{
+                max-width:55px;
+            }
         }
 
         /* --- RESPONSIVIDADE (MOBILE) --- */

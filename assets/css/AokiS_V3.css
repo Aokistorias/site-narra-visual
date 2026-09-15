@@ -382,6 +382,9 @@ header .btn-contato .btn a:link.active{
     header .logo img{
         margin-right: 1rem;
     }
+    header .btn-contato .btn a{
+        margin-right: -0.2rem;
+    }
 }
 /* ----- fim do BOTÃO de CONTATO ----- */
 
@@ -416,7 +419,7 @@ section.hero-site{
     }
     @media screen and (max-width: 768px) {
         section.hero-site{
-            background-position-x: 270px;
+            background-position-x: 260px;
         }
     }
 

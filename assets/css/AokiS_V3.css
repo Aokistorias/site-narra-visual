@@ -401,6 +401,17 @@ header .btn-contato .btn a:link.active{
 }
 /* ----- fim do BOTÃO de CONTATO ----- */
 
+/* ---- Para Tablets ---- */
+@media screen and (max-width: 1200px) {
+    header .btn-contato .btn a {
+        font-size:90%;
+        width: 5.5rem;
+        padding-top:0.3rem;
+        padding-bottom: 0.33rem;
+        padding: 0.3rem 0.2rem 0.33rem 0.2rem;
+    }
+}
+
 
 /* ---- Para celulares ---- */
 @media screen and (max-width: 768px){
@@ -415,9 +426,13 @@ header .btn-contato .btn a:link.active{
     header nav .menu {
         order: 3;/* vem depois do hamburguer no flex, mas no desktop fica normal */
     }
-    header .btn-contato a.btn {
-        padding-left: 2rem;
-        padding-right:2rem;
+    header .btn-contato .btn a {
+        font-size: 90%;
+        width:5.6rem;
+        padding-left: 0.6rem;
+        padding-right:0.6rem;
+        padding-top: 0.3rem;
+        padding-bottom: 0.35rem;
     }
 }
 /* ============= fim da NAVEGAÇÃO ============ */
@@ -458,19 +473,27 @@ section.hero-site{
 .hero-site .txt-hero h2 {
     font-size: clamp(1.3rem,1.8vw, 2.0rem);
     line-height: normal;
-    width: 60%;
+    width: 70%;
     margin-top: 1rem;
     margin-bottom: 2rem;
 }
 .hero-site .txt-hero p {
     font-size: clamp(1rem,1.4vw,1.4rem);
     letter-spacing: 0.03em;
-    width: 100%;
+    width: 70%;
     /*padding-bottom: 4em;*/
 }
-@media (min-width: 1280px){
-    .hero-site .txt-geral p{
-        max-width: 60%;
+@media (max-width: 1280px){
+    .hero-site .txt-hero h2{
+        width: 60%;
+    }
+    .hero-site .txt-hero p{
+        width: 55%;
+    }
+}
+@media screen and (max-width: 768px) {
+    .hero-site .txt-hero p{
+        width: 100%;
     }
 }
 /* ========== fim do HERO =========== */

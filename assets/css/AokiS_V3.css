@@ -560,7 +560,7 @@ section.geral{
     section#entender h3, section#transmitir h3, section#entregar h3 {
         color:#0853bc;
     }
-    section#entregar li {
+    section#entregar .interface .txt-geral ul li {
         background-image:url(../img/list-aokistorias.pos.png);
     }
     section#entregar h4 span {

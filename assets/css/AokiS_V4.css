@@ -640,6 +640,7 @@ section#entregar .interface .txt-geral ul li{
     letter-spacing: 0.11rem;
     font-size: 120%;
     margin-top: 1.2rem;
+    color:#fab433;
 }
 .geral .interface .txt-geral h4 {
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
@@ -660,7 +661,7 @@ section#entregar .interface .txt-geral ul li{
     font-size: clamp(1.1rem, 1.55vw, 1.6rem);
     text-transform: none;
     letter-spacing: 0.06rem;
-    color:#a1e9ee;
+    color:#fab433;
 }
 /* ======== fim para ENTREGAS ========== */
 
@@ -704,7 +705,7 @@ section#fernandoaoki {
 section#conversar {
     background-color: #cc0000;
     background-image: linear-gradient(#000, #cc0000, #000);
-    background-attachment: local;
+    background-attachment: local; color: ;
 }
 
 /*

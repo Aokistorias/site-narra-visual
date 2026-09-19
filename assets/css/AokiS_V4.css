@@ -634,13 +634,17 @@ section#entregar .interface .txt-geral ul li{
     background-position-x:0rem;
     padding-left:2.4rem;
 }
+section#entregar .interface .txt-geral h3,
 .geral .interface .txt-geral h3.soluciono{
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     text-transform: uppercase;
     letter-spacing: 0.11rem;
-    font-size: 120%;
-    margin-top: 1.2rem;
-    color:#fab433;
+    font-weight: normal;
+    font-size: 125%;
+    margin-top: 1.3rem;
+    margin-bottom: 1.4rem;
+    margin-left: 2.4rem;
+    color:#ffc456;
 }
 .geral .interface .txt-geral h4 {
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
@@ -661,7 +665,7 @@ section#entregar .interface .txt-geral ul li{
     font-size: clamp(1.1rem, 1.55vw, 1.6rem);
     text-transform: none;
     letter-spacing: 0.06rem;
-    color:#fab433;
+    color:#ffc456;
 }
 /* ======== fim para ENTREGAS ========== */
 

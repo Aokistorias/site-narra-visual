@@ -765,7 +765,7 @@ ul.redesocial li a:hover {
 }
 .geral .interface .txt-geral .redesocial li.whats {
     margin-bottom: .8rem;
-    background-image: url('../img/icon-whatsapp.png');
+    background-image: url('../img/icon-whats.svg');
     background-repeat: no-repeat;
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
@@ -782,14 +782,14 @@ ul.redesocial li.mail a:visited {
 
 ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.insta {
     margin-bottom: .8rem;
-    background-image: url('../img/icon-instagram.png');
+    background-image: url('../img/icon-insta.svg');
     background-repeat: no-repeat;
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
 }
 ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.mail {
     margin-bottom: .4rem;
-    background-image: url('../img/icon-mail.png');
+    background-image: url('../img/icon-email.svg');
     background-repeat: no-repeat;
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */

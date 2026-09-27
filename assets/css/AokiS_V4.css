@@ -794,5 +794,11 @@ ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.mail {
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
 }
+@media screen and (max-width: 768px) {
+    ul.redesocial{
+        margin-bottom: 4rem;
+    }   
+}
+
 
 /* ========== fim para CONTATO ========== */

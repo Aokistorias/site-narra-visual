@@ -590,6 +590,12 @@ section.geral{
     margin-bottom:0.8em;
     letter-spacing: 0.03em;
 }
+@media screen and (max-width: 768px) {
+    .geral .interface .txt-geral h3{
+        line-height: 1.45rem;
+    }
+}
+
 .geral .interface .txt-geral h3{
     font-size: clamp(1.20rem, 1.48vw, 1.9rem);
     text-transform: uppercase;
@@ -681,20 +687,33 @@ section#entender {
     background-image: linear-gradient(#000, #0068fa, #000);
     background-attachment:local;
 }
+section#entender blockquote{
+    color:#348edd;
+}
+
 section#conectar {
     background-color:#d5034d;
     background-image: linear-gradient(#000, #d5034d, #000);
     background-attachment:local;
+}
+section#conectar blockquote, section#conectar h3{
+    color:#fa92af;
 }
 section#transmitir {
     background-color:#000cfa;
     background-image: linear-gradient(#000, #000fca, #000);
     background-attachment:local;
 }
+section#transmitir blockquote, section#transmitir h3{
+    color:#8ab0fc;
+}
 section#transformar {
     background-color:#d800ad;
     background-image: linear-gradient(#000, #d800ad, #000);
     background-attachment:local;
+}
+section#transformar blockquote, section#transformar h3{
+    color:#e592fa;
 }
 section#entregar {
     background-color:#fa4300;
@@ -712,21 +731,6 @@ section#conversar {
     background-attachment: local; color: ;
 }
 
-/*
-    section#entender blockquote, section#transmitir blockquote, section#entregar blockquote {
-        color:#0853bc;
-        margin-bottom:2rem;
-    }
-    section#entender h3, section#transmitir h3, section#entregar h3 {
-        color:#0853bc;
-    }
-    section#entregar .interface .txt-geral ul li {
-        background-image:url(../img/list-aokistorias.pos.png);
-    }
-    section#entregar h4 span {
-        color:#0853bc;
-    }
-*/
 /*--- fim da alternância entre seções --- */
 
 /* ======== específico para CONTATO ========== */
@@ -742,14 +746,51 @@ section#conversar {
     letter-spacing: 0.06rem;
     background-color: #0869be;
     color:aliceblue;
+    border: 3px solid #fff;
+    border-right-color: #00373e;
+    border-bottom-color: #001221;
     padding: .5rem .8rem;
     margin: 2.6rem 0 1.5rem 0;
     cursor: pointer;
 }
+
 .geral .interface .txt-geral button.tally:hover {
     background-color:#fab433;
     color:#cc0000;
+    border-color: #a1e9ee;
+    border-right-color: #348edd;
+    border-bottom-color: #1262d2;
 }
+
+.geral .interface .txt-geral a.tallyso {
+    display: block;
+    width: 12.5rem;
+    font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
+    font-size: clamp(1.5rem, 180%, 2rem);
+    letter-spacing: 0.06rem;
+    background-color: #0869be;
+    color:aliceblue;    
+    border: 3px solid #fff;
+    border-right-color: #00373e;
+    border-bottom-color: #001221;
+    padding: .5rem .8rem;
+    margin: 2.6rem 0 1.5rem 0;
+    cursor: pointer;
+}
+@media screen and (max-width:768px) {
+    .geral .interface .txt-geral a.tallyso{
+        width: 11.5rem;
+    }
+
+}
+.geral .interface .txt-geral a.tallyso:hover {
+    background-color:#fab433;
+    color:#cc0000;
+    border-color: #a1e9ee;
+    border-right-color: #348edd;
+    border-bottom-color: #1262d2;
+}
+
 ul.redesocial {
     list-style: none;
     padding-left: 0;

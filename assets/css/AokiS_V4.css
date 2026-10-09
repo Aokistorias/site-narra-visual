@@ -421,7 +421,7 @@ header .btn-contato .btn a:active {
 @media screen and (max-width: 1200px) {
     header .btn-contato .btn a {
         font-size:90%;
-        width: 6.9rem;
+        width: 7.4rem;
         padding: 0.24rem 0.12rem 0.22rem 0.12rem;
     }
 }
@@ -442,11 +442,11 @@ header .btn-contato .btn a:active {
     }
     header .btn-contato .btn a {
         font-size: 90%;
-        width:7.6rem;
-        padding-left: 0.5rem;
-        padding-right:0.5rem;
-        padding-top: 0.31rem;
-        padding-bottom: 0.3rem;
+        width:7.2rem;
+        padding-left: 0.25rem;
+        padding-right:0.25rem;
+        padding-top: 0.41rem;
+        padding-bottom: 0.4rem;
         margin-top:0.51rem;
     }
 }

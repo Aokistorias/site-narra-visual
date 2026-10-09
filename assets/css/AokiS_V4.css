@@ -398,7 +398,7 @@ header .btn-contato .btn a:hover {
     border-right-color: #348edd;
     border-bottom-color: #1262d2;
 }
-header .btn-contato .btn a:link.active{
+header .btn-contato .btn a:active {
     color:#f7d493;
     background-color: #e74c3c;
     transform: none;
@@ -446,7 +446,7 @@ header .btn-contato .btn a:link.active{
         padding-right:0.5rem;
         padding-top: 0.31rem;
         padding-bottom: 0.3rem;
-        margin-top:0.75rem;
+        margin-top:0.51rem;
     }
 }
 /* ============= fim da NAVEGAÇÃO ============ */

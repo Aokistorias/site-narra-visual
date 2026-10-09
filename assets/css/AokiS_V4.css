@@ -372,18 +372,19 @@ header .btn-contato .btn a {
     text-decoration-line: none;
     text-decoration-color: transparent;
     display:block;
-    width: 120px;
+    width: 140px;
     height: auto;
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     font-weight: normal;
     font-size: 110%;
     line-height: 110%;
-    padding: 0.3rem 0.5rem 0.35rem 0.5rem;
+    padding: 0.5rem 0.5rem 0.5rem 0.5rem;
     text-align:center;
     text-transform: uppercase;
-    border: 3px solid #fff;
+    border: 3px solid #fff;     
     border-right-color: #007a8a;
     border-bottom-color: #0869be;
+    border-radius: 0.5rem;
     background-color:#a1e9ee;
     background-color: #e0ecff;
     color: #00494C;
@@ -408,6 +409,7 @@ header .btn-contato .btn a:link.active{
     }
     header .btn-contato .btn a{
         margin-right: -0.2rem;
+        width: 170px;
     }
 }
 /* ----- fim do BOTÃO de CONTATO ----- */
@@ -765,22 +767,23 @@ section#conversar {
 
 .geral .interface .txt-geral a.tallyso {
     display: block;
-    width: 12.5rem;
+    width: 17.8rem;
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
-    font-size: clamp(1.5rem, 180%, 2rem);
+    font-size: clamp(1.3rem, 150%, 1.8rem);
     letter-spacing: 0.06rem;
     background-color: #0869be;
     color:aliceblue;    
-    border: 3px solid #fff;
+    border: 5px solid #fff;
     border-right-color: #00373e;
     border-bottom-color: #001221;
-    padding: .5rem .8rem;
-    margin: 2.6rem 0 1.5rem 0;
+    border-radius: 0.6rem;
+    padding: .5rem 1rem;
+    margin: 1.05rem 0 1.7rem 0;
     cursor: pointer;
 }
 @media screen and (max-width:768px) {
     .geral .interface .txt-geral a.tallyso{
-        width: 11.5rem;
+        width: 14.2rem;
     }
 
 }

@@ -768,7 +768,7 @@ section#conversar {
 
 .geral .interface .txt-geral a.tallyso {
     display: block;
-    width: 17.8rem;
+    width: 16.2rem;
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     font-size: clamp(1.3rem, 150%, 1.8rem);
     letter-spacing: 0.06rem;

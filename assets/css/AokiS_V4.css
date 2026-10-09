@@ -446,7 +446,7 @@ header .btn-contato .btn a:link.active{
         padding-right:0.5rem;
         padding-top: 0.31rem;
         padding-bottom: 0.3rem;
-        margin-top:0.45rem;
+        margin-top:0.75rem;
     }
 }
 /* ============= fim da NAVEGAÇÃO ============ */
@@ -842,7 +842,7 @@ ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.mail {
 }
 @media screen and (max-width: 768px) {
     ul.redesocial{
-        margin-bottom: 4rem;
+        margin-bottom: 5.2rem;
     }   
 }
 

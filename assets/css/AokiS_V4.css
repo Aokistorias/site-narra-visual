@@ -442,10 +442,11 @@ header .btn-contato .btn a:link.active{
     header .btn-contato .btn a {
         font-size: 90%;
         width:7.6rem;
-        padding-left: 0.6rem;
-        padding-right:0.6rem;
+        padding-left: 0.5rem;
+        padding-right:0.5rem;
         padding-top: 0.31rem;
         padding-bottom: 0.3rem;
+        margin-top:0.45rem;
     }
 }
 /* ============= fim da NAVEGAÇÃO ============ */

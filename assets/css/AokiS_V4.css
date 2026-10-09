@@ -372,7 +372,7 @@ header .btn-contato .btn a {
     text-decoration-line: none;
     text-decoration-color: transparent;
     display:block;
-    width: 140px;
+    width: 8.4rem;
     height: auto;
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     font-weight: normal;
@@ -418,7 +418,7 @@ header .btn-contato .btn a:link.active{
 @media screen and (max-width: 1200px) {
     header .btn-contato .btn a {
         font-size:90%;
-        width: 4.8rem;
+        /*width: 4.9rem;*/
         padding-top:0.23rem;
         padding-bottom: 0.21rem;
         padding: 0.24rem 0.2rem 0.22rem 0.2rem;
@@ -441,7 +441,7 @@ header .btn-contato .btn a:link.active{
     }
     header .btn-contato .btn a {
         font-size: 90%;
-        width:5.6rem;
+        width:7.6rem;*
         padding-left: 0.6rem;
         padding-right:0.6rem;
         padding-top: 0.31rem;

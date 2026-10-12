@@ -58,11 +58,13 @@ body h1, body h2, body h4, body button, body blockquote {
 .interface, .geral .interface, .hero-site .interface {
     max-width: 1280px;
     margin: 0 auto;
+    padding:0;
 }
 @media screen and (max-width: 768px) {
-    .interface, .geral .interface{
-        margin-left: 0.5rem;
-        margin-right: 0.3rem;
+    .interface, .geral .interface, .hero-site .interface {
+        margin-left: 0.0rem;
+        /*margin-right: 0.3rem;*/
+        padding-left: 0.7rem;
     }
 }
 
@@ -86,6 +88,7 @@ header .logo img {
 @media screen and (max-width: 1200px){
     header{
         padding-left: min(1rem, 3%);
+        padding-left: 0.6rem;
         background-image: none;
     }
     section#home {
@@ -122,6 +125,7 @@ header .logo img {
     }
 }
 /* ======= fim do CABEÇALHO do site ======= */
+
 
 /* ============== NAVEGAÇÃO PRINCIPAL ========== */
 
@@ -452,6 +456,7 @@ header .btn-contato .btn a:active {
 }
 /* ============= fim da NAVEGAÇÃO ============ */
 
+
 /* ============= Seção HERO do Site ============ */
 section.hero-site{
     background-image: url(../img/arcoiris-dir-so.png);
@@ -515,6 +520,7 @@ section.hero-site{
 }
 /* ========== fim do HERO =========== */
 
+
 /* ========== imagens ILUSTRATIVAS dos capítulos ========= */
 .interface img.capitulo, .hero-site .interface img.capitulo {
     display: block;
@@ -548,8 +554,8 @@ section.hero-site{
         width:12rem;
     }
 }
-
 /* =========== fim das Imagens ILUSTRATIVAS =========== */
+
 
 /* ========== Seções GERAL =========== */
 section.geral{
@@ -631,6 +637,7 @@ section.geral{
 }
 /* ========== fim das Seções GERAIS ========== */
 
+
 /* ======== específico para ENTREGAS ========= */
 
 section.lista {
@@ -680,13 +687,9 @@ section#entregar .interface .txt-geral h3,
 }
 /* ======== fim para ENTREGAS ========== */
 
+/* ===== DIFERENçAS ENTRE SEÇÕES ===== */
 /* --- alternância de fundos e cores entre as seções --- */
 
-/* section#home {
-    background-color:#0068fa;
-    background-image: linear-gradient(#000, #007a8a, #000);
-    background-attachment:local;
-} */
 section#entender {
     background-color:#1540ff;
     background-image: linear-gradient(#000, #0068fa, #000);
@@ -738,12 +741,8 @@ section#conversar {
 
 /*--- fim da alternância entre seções --- */
 
-/* ======== específico para CONTATO ========== */
 
-/*.geral .interface .txt-geral iframe{
-    width: 100%;
-    height: auto;
-}*/
+/* ======== específico para CONTATO ========== */
 
 .geral .interface .txt-geral button.tally {
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
@@ -769,7 +768,7 @@ section#conversar {
 
 .geral .interface .txt-geral a.tallyso {
     display: block;
-    width: 11.2rem;
+    width: 20.5rem;
     font-family: "LT Comical Medium", "Comic Sans MS", "Marker Felt", "Droid Sans", sans-serif;
     font-size: clamp(1.3rem, 150%, 1.8rem);
     letter-spacing: 0.06rem;
@@ -780,13 +779,15 @@ section#conversar {
     border-right-color: #00373e;
     border-bottom-color: #001221;
     border-radius: 0.6rem;
-    padding: .5rem 1rem;
-    margin: 1.05rem 0 1.7rem 0;
+    padding: 0.9rem 1.2rem;
+    margin: 1.25rem 0 1.7rem 0;
     cursor: pointer;
 }
 @media screen and (max-width:768px) {
     .geral .interface .txt-geral a.tallyso{
-        width: 10.0rem;
+        width: 9.8rem;
+        line-height: 1.5rem;
+        padding: 0.5rem 1rem;
     }
 
 }
@@ -796,6 +797,7 @@ section#conversar {
     border-color: #a1e9ee;
     border-right-color: #348edd;
     border-bottom-color: #1262d2;
+    transform: scale(1.1);
 }
 
 ul.redesocial {
@@ -818,15 +820,6 @@ ul.redesocial li a:hover {
     background-position: left center; /* Alinha a imagem no meio do texto */
     padding-left: 2.5rem; /* Cria espaço para a imagem não colar no texto */
 }
-/*ul.redesocial li.whats a:link,
-ul.redesocial li.whats a:link {
-    color:#fff;
-}
-ul.redesocial li.whats a:visited,
-ul.redesocial li.mail a:visited {
-    color:#348edd;
-    ;
-}*/
 
 ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.insta {
     margin-bottom: .8rem;
@@ -847,6 +840,5 @@ ul.redesocial li.insta, .geral .interface .txt-geral .redesocial li.mail {
         margin-bottom: 5.2rem;
     }   
 }
-
 
 /* ========== fim para CONTATO ========== */

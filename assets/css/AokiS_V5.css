@@ -64,7 +64,7 @@ body h1, body h2, body h4, body button, body blockquote {
     .interface, .geral .interface, .hero-site .interface {
         margin-left: 0.0rem;
         /*margin-right: 0.3rem;*/
-        padding-left: 0.7rem;
+        padding-left: 0.6rem;
     }
 }
 
@@ -88,7 +88,7 @@ header .logo img {
 @media screen and (max-width: 1200px){
     header{
         padding-left: min(1rem, 3%);
-        padding-left: 0.6rem;
+        padding-left: 0.45rem;
         background-image: none;
     }
     section#home {

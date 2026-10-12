@@ -226,7 +226,9 @@ nav ul li:target, nav ul li a.active {
         /* --- RESPONSIVIDADE (TABLET) --- */
         @media screen and (max-width: 1280px) {
             header nav {
-                padding: 0.10rem;
+                margin-left:0;
+                padding-left: 0.10rem;
+                padding-right: 0;
             }
             header nav ul {
                 gap: 0rem;
